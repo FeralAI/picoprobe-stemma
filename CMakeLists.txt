@@ -70,6 +70,10 @@ pico_generate_pio_header(${EXECUTABLE_NAME} ${CMAKE_CURRENT_LIST_DIR}/src/probe.
 
 target_include_directories(${EXECUTABLE_NAME} PRIVATE src)
 
+target_compile_definitions(${EXECUTABLE_NAME} PRIVATE
+ 	PICO_RP2040_USB_DEVICE_ENUMERATION_FIX=1
+)
+
 target_link_libraries(${EXECUTABLE_NAME}
                       PRIVATE
                       pico_stdlib

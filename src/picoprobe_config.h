@@ -48,9 +48,7 @@
 // PIO config
 #define PROBE_SM 0
 
-#ifdef ADAFRUIT_QTPY_RP2040
-    #define PROBE_PIN_OFFSET 22     // Doesn't use a #defined pin name
-#elif defined SPARKFUN_PROMICRO
+#ifdef PICO_DEFAULT_I2C_SDA_PIN
     #define PROBE_PIN_OFFSET PICO_DEFAULT_I2C_SDA_PIN
 #else
     // Standard Pico SWD values

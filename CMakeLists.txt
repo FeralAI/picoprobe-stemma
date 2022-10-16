@@ -17,15 +17,16 @@ if (NOT DEFINED ENV{PICO_BOARD})
     # For example,
     #    "adafruit_qtpy_rp2040"    for the Adafruit QTPy
     #    "adafruit_feather_rp2040" for the Adafruit Feather RP2040
+    #    "adafruit_trinkey_qt2040" for the Adafruit Trinkey QT2040
     #    "sparkfun_promicro"       for the SparkFun Pro Micro RP2040
     #
     # The default is "pico"
 
-    # Set PICO_BORD here so that the SDK correctly applies it
-    set(PICO_BOARD "pico")
+    # Set PICO_BOARD here so that the SDK correctly applies it
+    set(PICO_BOARD "adafruit_qtpy_rp2040")
     message("Environment variable PICO_BOARD undefined -- using \"pico\"")
 else()
-    # Set PICO_BORD here, from the env var, so that the SDK correctly applies it
+    # Set PICO_BOARD here, from the env var, so that the SDK correctly applies it
     set(PICO_BOARD "$ENV{PICO_BOARD}")
     message("Environment variable PICO_BOARD defined -- using $ENV{PICO_BOARD}")
 endif()
